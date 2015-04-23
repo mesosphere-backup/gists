@@ -1,14 +1,21 @@
-#Introduce the concept of Shared Resources
+# Introduce the concept of *clusterwide ressources*.
 *Note: As of right now this document is only meant to describe the problem to to be solved and gather requirements, not to design potential solutions* 
 
 #Proposal
-Introduce the concept of Shared Resources.
+Introduce the concept of clusterwide resources into Mesos.
 
 #Problem Statement:
-Multiple frameworks or roles want access to shared resources, including disk, in the DCOS. One example is that Spark and Hadoop may want access to the same persistent resources. Another example is Chronos and Marathon who need access.
+There are resources which are not provided by a single node. Consider for example a external Network Bandwidth of a cluster. Being a limited resource it makes sense for Mesos to manage it but still it is not a ressource being offered by a single node.
 
 ##Use Cases:
-As a use case, Hadoop and Spark may want to access the same data set stored as a volume in the data center operating system. Chronos and Cassandra may want to access the same disk resources (possibly using Cassandra as a backup for Chronos jobs). Chronos and Marathon may want to use some of the same disk resources for deploying applications as well as jobs. Also, within the same framework, multiple tasks may want to use the same disk resources as well.
+1. Network Bandwidth
+2. Distributed File System Storage
+3. Software Licences
 
 #Challenges:
-Currently, in Mesos, a task accepts an offer and then the offer is in use and cannot be used by other tasks. With persistent primitives and reservations, the model is that a specific volume may be reserved for a certain role. This does not allow us to share disk resources, for example, between roles.
+- [ ] Zombie Tasks: Task running on a non-reachable slave, but still consuming clusterwide resources.
+
+<!---
+#Potential Solutions:
+- introduce a virtual node representing the cluster and offering these clusterwide resources. 
+-->
