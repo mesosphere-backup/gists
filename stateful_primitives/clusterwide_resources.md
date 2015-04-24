@@ -14,6 +14,7 @@ There are resources which are not provided by a single node. Consider for exampl
 
 #Challenges:
 - [ ] Zombie Tasks: Task running on a non-reachable slave, but still consuming clusterwide resources.
+- - [ ] What is the semantic of reservations on top of clusterwide resources?.
 
 <!---
 #Potential Solutions:
