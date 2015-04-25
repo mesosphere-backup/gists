@@ -9,8 +9,10 @@ There are resources which are not provided by a single node. Consider for exampl
 
 ##Use Cases:
 1. Network Bandwidth
+2. IP Addresses
 2. Distributed File System Storage
 3. Software Licences
+
 
 #Challenges:
 - [ ] Zombie Tasks: Task running on a non-reachable slave, but still consuming clusterwide resources.
