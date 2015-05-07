@@ -1,4 +1,4 @@
-# Introduce the concept of *clusterwide ressources*.
+# Introduce the concept of *clusterwide resources*.
 *Note: As of right now this document is only meant to describe the problem to to be solved and gather requirements, not to design potential solutions* 
 
 #Proposal
