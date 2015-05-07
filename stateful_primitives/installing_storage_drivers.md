@@ -23,5 +23,7 @@ As it is not desirable to deploy the driver onto all nodes in the cluster, it wo
 - [ ] Influence on scheduling decision? Treat drivers as kind of special resource? 
 - [ ] Different versions/sharing between frameworks?
 - [ ] Different configurations for two instances of the same storage framework, same driver?
+- [ ] How does the storage framework scheduler send/provide the storage driver?
+- [ ] Will we need a driver repository hosted on the master(s), or on top of a DFS?
 
 
