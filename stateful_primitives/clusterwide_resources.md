@@ -10,6 +10,7 @@ There are resources which are not provided by a single node. Consider for exampl
 ##Use Cases:
 1. Network Bandwidth
 2. IP Addresses
+3. Global Service Ports
 2. Distributed File System Storage
 3. Software Licences
 
