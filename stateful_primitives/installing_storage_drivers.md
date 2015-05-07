@@ -10,16 +10,18 @@ When Tasks in Mesos require access to such storage they also need access to the 
 As it is not desirable to deploy the driver onto all nodes in the cluster, it would be good to deploy the driver on demand.
 
 ##Use Cases:
-1. Fetcher Cache accessing ressources
-2. Frameworks requiring access to HDFS/DFS
-3. Databases requiring drivers
+1. Fetcher Cache accessing resources from user-provided URIs
+2. Framework executors/tasks requiring access to HDFS/DFS
+3. Framework executors/tasks requiring Databases access (requiring drivers)
 
 
 #Challenges:
-- [ ] Fetc
+- [ ] Fetcher must know where to find the drivers at slave startup
 - [ ] What is the semantic of reservations on top of clusterwide resources?.
 - [ ] When can we remove the driver later?
+- [ ] How/when do upgrade a storage driver?
 - [ ] Influence on scheduling decision? Treat drivers as kind of special resource? 
 - [ ] Different versions/sharing between frameworks?
+- [ ] Different configurations for two instances of the same storage framework, same driver?
 
 
